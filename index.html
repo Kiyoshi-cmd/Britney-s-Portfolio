@@ -2,122 +2,234 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Brittany Warren | At Home Mother</title>
+  <title>Brittany Warren | At-Home Mom Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --main-blue: #3b5ba9;
-      --navy-blue: #1a2747;
-      --white: #ffffff;
-      --accent-blue: #6ec1e4;
-      --text-color: #222e3c;
+      --classic-blue: #4063a3;
+      --classic-gold: #e5c77c;
+      --classic-bg: #f9f7f3;
+      --classic-border: #d1bfa3;
+      --classic-text: #463c2e;
+      --classic-accent: #f7e3b5;
+      --classic-link: #3d5a80;
+      --card-shadow: 0 2px 10px #b9b1a21a;
+      --radius: 9px;
     }
-
     body {
+      background: var(--classic-bg);
+      color: var(--classic-text);
+      font-family: 'Georgia', 'Times New Roman', serif;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      background: linear-gradient(135deg, var(--main-blue) 0%, var(--navy-blue) 100%);
-      color: var(--text-color);
       min-height: 100vh;
     }
-
     .container {
-      max-width: 420px;
-      margin: 60px auto 0 auto;
-      background: var(--white);
-      border-radius: 22px;
-      box-shadow: 0 10px 32px rgba(27, 48, 79, 0.18);
-      padding: 32px 24px 32px 24px;
+      max-width: 490px;
+      margin: 48px auto 0 auto;
+      background: var(--classic-accent);
+      border: 2px solid var(--classic-border);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 40px 32px 32px 32px;
       text-align: center;
+      box-sizing: border-box;
     }
-
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 112px;
+      height: 112px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-blue) 60%, var(--main-blue) 100%);
+      border: 4px solid var(--classic-gold);
+      background: var(--classic-blue);
+      color: var(--classic-gold);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 22px auto;
-      font-size: 64px;
-      color: var(--white);
-      box-shadow: 0 2px 8px rgba(59,91,169,0.10);
+      font-family: 'Georgia', serif;
+      font-size: 54px;
       font-weight: bold;
-      letter-spacing: 2px;
+      margin: 0 auto 15px auto;
+      box-shadow: 0 1px 9px #463c2e22;
+      letter-spacing: 3px;
     }
-
     h1 {
-      margin: 0 0 10px 0;
-      color: var(--main-blue);
-      font-size: 2rem;
+      margin: 0 0 7px 0;
+      color: var(--classic-blue);
+      font-family: 'Georgia', serif;
+      font-size: 2.2rem;
       font-weight: 700;
+      letter-spacing: 0.04em;
+      text-shadow: 0 1px 0 var(--classic-gold);
     }
-
-    .job {
-      font-size: 1.1rem;
-      color: var(--navy-blue);
-      margin-bottom: 16px;
+    .intro {
+      font-size: 1.13rem;
+      background: #fffbe9;
+      color: var(--classic-text);
+      padding: 14px 18px 14px 18px;
+      border-radius: 8px;
+      margin: 20px 0 27px 0;
+      border-left: 5px solid var(--classic-gold);
+      font-style: italic;
+      box-shadow: 0 1px 8px #e5c77c28;
     }
-
-    .details {
-      text-align: left;
-      margin: 0 auto 24px auto;
-      max-width: 320px;
-      font-size: 1rem;
-    }
-    .details dt {
-      font-weight: 600;
-      color: var(--main-blue);
-      margin-top: 10px;
-    }
-    .details dd {
+    .section-title {
+      color: var(--classic-blue);
+      font-size: 1.09rem;
       margin: 0 0 8px 0;
-      color: var(--text-color);
+      font-weight: 600;
+      font-family: 'Georgia', serif;
+      text-align: left;
     }
-
+    .section-group {
+      background: #fffdf7;
+      border-radius: 7px;
+      border: 1px solid var(--classic-border);
+      box-shadow: 0 1px 3px #d1bfa33a;
+      margin: 0 auto 22px auto;
+      padding: 18px 15px 11px 15px;
+      max-width: 340px;
+      text-align: left;
+    }
+    .details {
+      font-size: 1.01rem;
+      margin: 0 0 8px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .details li {
+      margin-bottom: 7px;
+      line-height: 1.5;
+    }
+    .details strong {
+      color: var(--classic-blue);
+      min-width: 90px;
+      display: inline-block;
+      font-weight: 600;
+      font-family: 'Georgia', serif;
+    }
+    /* --- Favorites Section --- */
+    .favorites-cats {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 4px;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+    .favorites-category {
+      margin-bottom: 0;
+    }
+    .favorites-category-title {
+      color: var(--classic-gold);
+      font-size: 1.01rem;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      margin-bottom: 4px;
+      margin-top: 0;
+      letter-spacing: 0.02em;
+      text-shadow: 0 1px 0 #fffbe9;
+    }
+    .favorites-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 11px;
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .favorites-list li {
+      background: #e5c77c22;
+      color: var(--classic-blue);
+      border-radius: 6px;
+      padding: 6px 13px;
+      font-size: 0.99rem;
+      font-family: 'Georgia', serif;
+      font-weight: 500;
+      border: 1px solid #e5c77c55;
+    }
     .contact {
-      margin: 18px 0;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      align-items: center;
+      align-items: flex-start;
+      margin-top: 10px;
     }
     .contact a, .contact span {
       text-decoration: none;
-      color: var(--navy-blue);
-      font-weight: 500;
-      background: var(--accent-blue);
-      padding: 8px 16px;
-      border-radius: 12px;
-      transition: background .2s;
+      color: var(--classic-link);
+      font-family: 'Georgia', serif;
+      font-weight: 600;
+      background: #fffbe9;
+      padding: 8px 18px;
+      border-radius: 8px;
+      border: 1px solid var(--classic-gold);
+      transition: background 0.17s, color 0.17s;
+      font-size: 1.03rem;
       display: inline-block;
-      font-size: 1rem;
+      box-shadow: 0 1px 6px #e5c77c24;
     }
     .contact a:hover {
-      background: var(--main-blue);
-      color: var(--white);
+      background: var(--classic-blue);
+      color: var(--classic-gold);
     }
-
+    .socials {
+      display: flex;
+      gap: 14px;
+      margin-top: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: #fffbe9;
+      color: var(--classic-blue);
+      border-radius: 99px;
+      padding: 6px 14px 6px 9px;
+      font-size: 1rem;
+      font-family: 'Georgia', serif;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid #e5c77c99;
+      box-shadow: 0 1px 5px #e5c77c1c;
+      transition: background 0.16s, color 0.17s;
+    }
+    .social-link:hover {
+      background: var(--classic-blue);
+      color: var(--classic-gold);
+    }
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      color: var(--classic-gold);
+    }
     .footer {
-      font-size: 0.95rem;
-      color: var(--main-blue);
-      margin-top: 24px;
-      opacity: 0.82;
+      font-size: 1.01rem;
+      color: var(--classic-blue);
+      margin-top: 22px;
+      opacity: 0.89;
+      font-family: 'Georgia', serif;
+      text-shadow: 0 1px 0 #fffbe9;
     }
-
-    @media (max-width: 500px) {
+    @media (max-width: 540px) {
       .container {
-        margin: 20px 4px;
-        padding: 16px 4px;
+        margin: 12px 2px;
+        padding: 10px 2px 16px 2px;
       }
       .avatar {
-        width: 85px;
-        height: 85px;
-        font-size: 38px;
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
       }
-      h1 { font-size: 1.35rem;}
+      h1 { font-size: 1.18rem;}
+      .section-group { padding: 9px 3px 5px 7px; max-width: 99vw;}
+      .intro { font-size: 0.97rem; padding: 9px 7px;}
+      .footer { font-size: 0.93rem;}
+      .socials { gap: 7px; }
+      .social-link { font-size: 0.93rem; padding: 4px 8px 4px 6px;}
+      .social-link svg { width: 15px; height: 15px;}
     }
   </style>
 </head>
@@ -125,23 +237,99 @@
   <div class="container">
     <div class="avatar">BW</div>
     <h1>Brittany Warren</h1>
-    <div class="job">At Home Mother</div>
-    <dl class="details">
-      <dt>Age</dt>
-      <dd>30</dd>
-      <dt>Birthday</dt>
-      <dd>July 23, 1994</dd>
-      <dt>Style</dt>
-      <dd>Modern / Cute</dd>
-      <dt>Favorite Colors</dt>
-      <dd>Blue, White, Navy Blue, and more</dd>
-    </dl>
-    <div class="contact">
-      <a href="tel:3213305197" title="Call Brittany">📞 321-330-5197</a>
-      <a href="mailto:brittanywarren1542@gmail.com" title="Email Brittany">✉️ brittanywarren1542@gmail.com</a>
+    <div class="intro">
+      Hi, I'm Britney Warren, a thirty year old, at-home mom. This is my portfolio! I have: <b>Contact info</b>, <b>About me</b>, and <b>my favorite things</b>. Hope you enjoy 💙
+    </div>
+    <div class="section-group">
+      <div class="section-title">About Me</div>
+      <ul class="details">
+        <li><strong>Age:</strong> 30</li>
+        <li><strong>Birthday:</strong> July 23, 1994</li>
+        <li><strong>Profession:</strong> At-Home Mother</li>
+        <li><strong>Style:</strong> Classic & Inviting</li>
+        <li><strong>Photography:</strong> 3 years of experience</li>
+        <li><strong>Security Officer:</strong> 2 years of experience</li>
+      </ul>
+    </div>
+    <div class="section-group">
+      <div class="section-title">Contact Info</div>
+      <div class="contact">
+        <a href="tel:3213305197" title="Call Brittany">📞 321-330-5197</a>
+        <a href="mailto:brittanywarren1542@gmail.com" title="Email Brittany">✉️ brittanywarren1542@gmail.com</a>
+      </div>
+      <div class="socials">
+        <a class="social-link" href="https://www.instagram.com/brittanywarren94?igsh=MTR5eG1wN2RoMDJ2Zw==" target="_blank" rel="noopener" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.3.8a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/>
+          </svg>
+          Instagram
+        </a>
+        <a class="social-link" href="https://www.facebook.com/share/16j1WL13AW/" target="_blank" rel="noopener" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M13.8 22v-8.05h2.7l.4-3.15h-3.1v-2c0-.91.23-1.54 1.47-1.54h1.57V4.61C16.44 4.42 15.55 4.2 14.45 4.2c-2.06 0-3.45 1.25-3.45 3.56v2.04H8v3.15h3v8.05h2.8z"/>
+          </svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+    <div class="section-group">
+      <div class="section-title">My Favorite Things</div>
+      <div class="favorites-cats">
+        <div class="favorites-category">
+          <div class="favorites-category-title">Favorite Colors</div>
+          <ul class="favorites-list">
+            <li>Blue</li>
+            <li>White</li>
+            <li>Navy Blue</li>
+            <li>Gold</li>
+          </ul>
+        </div>
+        <div class="favorites-category">
+          <div class="favorites-category-title">Favorite Hobbies</div>
+          <ul class="favorites-list">
+            <li>Family Time</li>
+            <li>Home Cooking</li>
+            <li>Reading Classic Books</li>
+            <li>Cute Decor</li>
+            <li>Music</li>
+            <li>Creativity</li>
+            <li>Cozy Mornings</li>
+            <li>Photography</li>
+          </ul>
+        </div>
+        <div class="favorites-category">
+          <div class="favorites-category-title">Favorite Places</div>
+          <ul class="favorites-list">
+            <li>Home</li>
+            <li>Parks</li>
+            <li>Beach</li>
+            <li>Bookstores</li>
+            <li>Cafés</li>
+          </ul>
+        </div>
+        <div class="favorites-category">
+          <div class="favorites-category-title">Favorite Things</div>
+          <ul class="favorites-list">
+            <li>Modern & Classic Design</li>
+            <li>Warm Blankets</li>
+            <li>Family Photos</li>
+            <li>Fresh Flowers</li>
+          </ul>
+        </div>
+        <div class="favorites-category">
+          <div class="favorites-category-title">Favorite Music</div>
+          <ul class="favorites-list" style="flex-direction:column;">
+            <li>"Ocean Eyes" – Billie Eilish</li>
+            <li>"Small Bump" – Ed Sheeran</li>
+            <li>"Inland Sky" – Little Hands</li>
+            <li>"Good Good Father" – Chris Tomlin</li>
+            <li>"OFFICIAL Somewhere over the Rainbow" – Israel "IZ" Kamakawiwo'ole</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="footer">
-      Made with <span style="color:#e25555;">&#10084;</span> for Brittany Warren.<br>
+      Made with <span style="color:#e5c77c;">&#10084;</span> for Brittany Warren.<br>
       &copy; 2025
     </div>
   </div>
